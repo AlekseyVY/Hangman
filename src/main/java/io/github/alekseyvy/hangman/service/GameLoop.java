@@ -65,7 +65,7 @@ public class GameLoop {
         ConsoleRender.PrintGameData(this.gameController.getPrintablePublicWord(), this.gameState.getWrongGuessesCount(), this.gameController.getPrintableWrongWords());
         while(true){
             ConsoleRender.PromptLetterGuess();
-            String letter = input.nextLine();
+            String letter = input.nextLine().trim().toLowerCase();
             if(UserInputValidator.isRussianChar(letter.charAt(0))) {
                 this.gameController.updateGuess(letter);
                 break;
