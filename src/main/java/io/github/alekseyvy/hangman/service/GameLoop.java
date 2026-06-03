@@ -63,9 +63,6 @@ public class GameLoop {
         int hangmanState = this.gameController.getHangmanState();
         ConsoleRender.PrintCurrentGameState(hangmanState);
         ConsoleRender.PrintGameData(this.gameController.getPrintablePublicWord(), this.gameState.getWrongGuessesCount(), this.gameController.getPrintableWrongWords());
-        // test: |
-        System.out.println(this.gameState.getWord());
-        // test: |
         while(true){
             ConsoleRender.PromptLetterGuess();
             String letter = input.nextLine();
